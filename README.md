@@ -113,6 +113,12 @@ A 2D game that has a built in injection and blood check reminder with a calorie 
 * Server for communication and other interactions
 * Reach goal: web
 
+## Tentative Timeline
+* 2/23: Spec
+* 3/23: MVP
+* 5/23: Beta
+* ...
+
 
 ## Remaining Questions / Tasks
 
