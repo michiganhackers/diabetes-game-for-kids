@@ -45,3 +45,16 @@ MVP
 ---> Buy stuff to customize character and environment
 
 Creative Assets
+-> Hub assets
+---> Few buildings/background
+-> Sky town
+---> Forget this
+-> Character
+---> Basic character creation
+--------> Three different basic animals (cat, dog, dragon)
+--------------> Standing, walking animation frames
+--------------> Blink, yawn, etc animations
+---> Hats
+---> Eyewear (glasses)
+---> Clothes
+------> Must have a sparkly, glittery set of everything (neon blue) [plz? Not priority at all, but ya know~]
