@@ -1,0 +1,47 @@
+RPG
+--> 2D
+--> Reward system
+
+Mini games
+-> Dots n Boxes
+-> Snake
+-> Pongxx 
+
+--> Insulin = potion
+
+Hub
+-> Inventory
+-> Quest Givers/Getters
+-> Shops
+  --> Medicine, armor, weapons
+-> Personalization
+-> Depending on how well you've been doing, town changes
+-> Day n Night cycle with clock tower
+
+Sky Town
+-> Parent interface
+-> Monitor and confirm child history
+
+Need to measure
+-> Overall how doing
+
+Calorie Counting
+-> Interact with calorie counter person
+-> Possibility: Have parents pre-set up some items/favorites
+
+
+Questions
+-> (?) - Calories, How do people know how many calories an item (ie, homemade) is? How do they teach each other? What about accuracy?
+-> (?) - Popular, longer-lasting games with the age group\
+
+Focus:
+Sky Town + Hub
+
+MVP
+-> Parent can define what kid needs to do
+-> Hub where kid can go and report data
+---> Create character
+---> Get coins
+---> Buy stuff to customize character and environment
+
+Creative Assets
