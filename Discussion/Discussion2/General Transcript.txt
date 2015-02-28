@@ -1,0 +1,41 @@
+MVP Storyboard Meeting
+(Meeting #2)
+
+<General>
+-> Split into two separate apps for now, for simplicity (and storyboard was split between these two)
+---> Kid's side, done in Unity
+---> Parent's side, done natively (due to how simple it would be in native rather than in Unity)
+-> Drafted the "necessary" components for our MVP, as well as due dates
+-> MVP more or less consists of parent's ability to see kids' data (and set Calorie Counter requirements) and kid's side consists of picking a pet (only a cat for now), being able to choose accessories, and having the need
+
+<Work Split>
+-> For beginning (at least until first, 4 day deadline), Spruce works on iOS native Parent's Side, Shayna on Android native Parent's Side, and Jawad on Kid's Side Unity
+
+<Self-Inflicted Deadlines>
+<- Note: Preferably get this done earlier to polish it all visually for the meeting
+<> 4 Days [Tuesday March 3rd]
+-> Kid's Side
+---> Splash, sign up, login, choose character screens
+-> Parent's Side
+---> Splash, sign up, login, add/modify kids screens
+<> 7 Days [Thursday March 5th]
+-> Kid's Side
+---> Food shop, calorie counter area
+-> Parent's Side
+---> Kid overarching data view (basically, where to click "Calorie Center"), modify/set CC requirements screen, 7 day calorie center view
+<> 11 Days [March 9th] (FINAL DATE FOR MVP)
+-> Kid's Side
+---> Pet shop, basic Hub, basic House (preferably if time, not necessary), polish polish polish
+-> Parent'S Side
+---> Month calorie center view, weekview, polish polish polish
+
+<Questions>
+-> Everything from before about current practices and such
+-> Figure out what parents would want to set for calorie counter settings
+-> Creative assets: Who's our creative guy?
+
+<Next Meeting>
+-> Undecided time, but everyone expressed wish to have another psuedo-meeting at least sometime during Spring Break
+
+<Side Notes>
+-> Can fake notifications, server requirements (ie, online syncing, user accounts, etc), and such. May only need to talk about them rather than try to fake them as well (particularly notifications)
