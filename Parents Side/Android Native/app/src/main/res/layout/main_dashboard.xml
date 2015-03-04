@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.michiganhackers.gamediabetesparentandroid.MainDashboard"
+    android:gravity="center">
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Adam"
+        android:id="@+id/demo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Add New"
+        android:id="@+id/add_new"
+        android:layout_below="@+id/demo"
+        android:layout_alignLeft="@+id/demo"
+        android:layout_alignStart="@+id/demo"
+        android:textSize="30dp"
+        android:gravity="center" />
+
+</RelativeLayout>
