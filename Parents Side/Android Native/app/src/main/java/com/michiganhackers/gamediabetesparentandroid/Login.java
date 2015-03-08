@@ -1,5 +1,6 @@
 package com.michiganhackers.gamediabetesparentandroid;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -29,7 +30,7 @@ public class Login extends ActionBarActivity {
             Button endBtn = (Button ) v;
 
             //to get to next view
-           // startActivity( new Intent( getApplicationContext(), Activityname.class ));
+           startActivity( new Intent( getApplicationContext(), MainDashboard.class ));
            //https://www.youtube.com/watch?v=KhSM_CRCLRo
         }
 }
