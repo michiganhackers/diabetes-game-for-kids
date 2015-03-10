@@ -1,0 +1,32 @@
+<Research>
+-> How to count carbs (best practice?)
+-> How to know how many carbs per given food item
+-> How often is the counter needed
+-> How do parents track carbs (by meal?)
+
+-> Where does this fit with other resources?
+
+<Parents Setting>
+-> How often the kids need to report carbs
+-> Pre-foods?
+
+<Two Week Goal>
+-> Carb counter fully done
+-> Some sort of reward system (game mechanics)
+-> Login + pseudo-registration system
+-> Parent data reviewal system
+-> Parent setting child specifics
+
+-> Research
+-> Digitize and easily present storyboard
+
+-> Everything in Unity
+
+<Reach Goals>
+Parents Side~
+-> Setup parent's side full (includes email sending)
+
+Using 
+
+SAM->
+-> What did you not like about our storyboard
