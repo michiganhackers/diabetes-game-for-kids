@@ -1,0 +1,43 @@
+<What We Need to Do>
+-> New storyboard
+---> Currently doing [or other method to present overarching idea]
+---> For moreso end product storyboard
+
+1) Kids Login, Parents Login + Sign up
+2) Carb counter
+--> How parents should make carb counter presets [interfaces]
+3) Kid game aspects
+--> Pick character
+--> Carb counter clerk
+--> Pet shop
+--> Hub
+4) Parent Dashboard
+--> Setting carb counter settings
+5) Setting the data systems up
+
+<What Makes Us Special>
+-> Teaching kids lifelong habits in a way that's fun and rewarding
+
+<Parents Settings Need to Be Set>
+-> Carbs per meal
+-> Number of meals per day
+---> When and if reminders should be set for kid
+-> Notifications settings
+---> Actually hit notification bar if kid doesn't report, or just in game
+-> Reminders for updating plan
+-> Preset foods
+
+<Unity Workspace Rules>
+-> Work in your OWN scenes and folders
+-> If you even open a scene and move around, it may try to save. If it accidentally saves, DONT commit- look up how to revert a file
+-> Work in your own branch (push and commit into your own branch, can merge later)
+
+<For Next Meeting [Monday]>
+-> Learn Unity fo' sho' finally
+-> Learn mobile version
+-> Interfaces, data sytems, ie how to track kids and parents
+
+Jawad -> Make assets links
+
+Need to get by Thursday
+Publish to GPlay store as beta Friday
