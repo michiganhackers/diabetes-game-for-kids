@@ -10,16 +10,16 @@ For more information.
 ## Minimum Viable Product
 
 
-A 2D game that has a built in injection and blood check reminder with a calorie count. 
+A 2D "pet" game with a carb counter.
 
 
 ## General Features
 
 * reminding of taking insulin
    * as part of setting up app have user input when they are expected to take injection
-* calorie count
-   * Provide basic calorie count examples (or dump the database for them)
-   * Calorie count calculator tool
+* carb count
+   * Provide basic carb count examples (or dump the database for them)
+   * Carb count calculator tool
 * blood glucose checking
    * also have user input when they should be taking injections as part of setting up app
 * reward/incentivise treatment
@@ -68,9 +68,9 @@ A 2D game that has a built in injection and blood check reminder with a calorie 
 ### Backend
     
 * Data to Track
-* Calories
-  * Calories per meal, per day
-  * Access to calorie database (as examples)
+* Carbs
+  * Carbs per meal, per day
+  * Access to carb database (as examples)
   * Injections (times)
 * Blood samples
   * Exercise
