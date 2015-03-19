@@ -15,64 +15,83 @@ public class SQLiteDataTester : MonoBehaviour {
     private DatabaseConnector dConnector;
 
     public Button createTables; // Enabled/disabled if need to create tables
-    public Button submitButton; // TODO: Rework this crap
+    public Button getDataButton; // TODO: Rework this crap
+    public Text outputText;      // Where output text will be shown
+
+    // Debug function: Outputs "output" to the log as well as the screen debugger
+    void outputInfo(string output) {
+        outputText.text = outputText.text + "\n" + output;
+    }
 
     // Creates the database, should only happen once
-    void CreateDB()
-    {
+    void CreateDB() {
+        outputInfo("Trying to create database...");
+        try
+        {
+            //Create tables
+            dConnector.CreateChapterTables();
+            //Lock DB with key
+            dConnector.SetKey(DBKey);
 
+            outputInfo("Data created successfully");
+
+            //Flip NewDB
+            newDB = 1;
+            PlayerPrefs.SetInt("newDB", newDB);
+
+            // Disable the createTables button
+            createTables.enabled = false;
+            createTables.image.color = new Color(1f, 1f, 1f, 0.3f);
+
+        }
+        catch (Exception)
+        {
+            outputInfo("Database already exists!");
+            //Database already exists
+            createTables.enabled = false;
+            createTables.image.color = new Color(1f, 1f, 1f, 0.3f);
+            newDB = 1;
+            PlayerPrefs.SetInt("newDB", newDB);
+
+        }
     }
 
 	// Use this for initialization
 	void Start () {
+        // Empty out the output text
+        outputText.text = "";
+
         dConnector = new DatabaseConnector(DatabaseName);
 
         // Reset database if necessary
         if (resetDatabase)
         {
+            outputInfo("Database reset");
             // Clearing out saved newDB value will later on make the db
-            PlayerPrefs.DeleteAll();
+            PlayerPrefs.DeleteKey("newDB");
         }
 
         // Get if a newDB is necessary or not
         newDB = PlayerPrefs.GetInt("newDB");
         if (newDB == 0)
         {
+            outputInfo("newDB was zero");
             createTables.onClick.AddListener(() =>
             {
-                try
-                {
-                    //Create tables
-                    dConnector.CreateChapterTables();
-                    //Lock DB with key
-                    dConnector.SetKey(DBKey);
-                    //Flip NewDB
-                    newDB = 1;
-                    PlayerPrefs.SetInt("newDB", newDB);
-                    createTables.enabled = false;
-                    createTables.image.color = new Color(1f, 1f, 1f, 0.3f);
-
-                }
-                catch (Exception)
-                {
-                    //Database already exist
-                    createTables.enabled = false;
-                    createTables.image.color = new Color(1f, 1f, 1f, 0.3f);
-                    newDB = 1;
-                    PlayerPrefs.SetInt("newDB", newDB);
-
-                }
+                CreateDB();
             });
         }
         else
         {
+            outputInfo("newDB was one");
+            // Disable create tables button
             createTables.enabled = false;
             createTables.image.color = new Color(1f, 1f, 1f, 0.3f);
         }
 
-        submitButton.onClick.AddListener(() =>
+        getDataButton.onClick.AddListener(() =>
         {
-            Debug.Log("Submit DB: Not yet implemented");
+            outputInfo("Submit DB: Not yet implemented");
 
             //string pass = password.text;
             //if (pass == DBKey)
