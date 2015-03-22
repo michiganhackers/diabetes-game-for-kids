@@ -6,4 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/jnWorkspace/sqliteTest/SQLite Tester v2.unity
+    path: Assets/ParentAssets/Standard Assets/AddNewKid.unity
+  - enabled: 1
+    path: Assets/ParentAssets/Standard Assets/ModifySettingsParentDash.unity
+  - enabled: 1
+    path: Assets/ParentAssets/Standard Assets/ParentDash.unity
+  - enabled: 1
+    path: Assets/ParentAssets/Standard Assets/John.unity
+  - enabled: 1
+    path: Assets/ParentAssets/Standard Assets/AddNewKid.unity
