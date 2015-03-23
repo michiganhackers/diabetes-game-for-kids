@@ -15,4 +15,8 @@ public class MenuManager : MonoBehaviour {
 		CurrentMenu = menu;
 		CurrentMenu.IsOpen = true;
 	}
+
+    public void GoToParentDash() {
+        Application.LoadLevel("ParentDash");
+    }
 }
