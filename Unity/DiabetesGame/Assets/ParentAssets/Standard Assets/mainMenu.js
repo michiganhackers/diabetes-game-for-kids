@@ -27,3 +27,7 @@ function OpenJohn () {
 function CharCreate () {
 	Application.LoadLevel( "CharacterCreator" );
 }
+
+function CarbCtr () {
+	Application.LoadLevel( "CarbCounter" );
+}
