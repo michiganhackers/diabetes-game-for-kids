@@ -15,3 +15,5 @@ EditorBuildSettings:
     path: Assets/ParentAssets/Standard Assets/ParentDash.unity
   - enabled: 1
     path: Assets/ParentAssets/Standard Assets/John.unity
+  - enabled: 1
+    path: Assets/CarbCounter/Meals.unity
