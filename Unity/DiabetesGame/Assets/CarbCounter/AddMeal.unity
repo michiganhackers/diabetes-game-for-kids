@@ -427,7 +427,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 571721679}
-        m_MethodName: CarbCtr
+        m_MethodName: Meal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -952,7 +952,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 571721679}
-        m_MethodName: CarbCtr
+        m_MethodName: Meal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

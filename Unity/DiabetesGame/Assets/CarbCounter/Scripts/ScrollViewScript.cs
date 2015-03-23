@@ -7,6 +7,7 @@ public class ScrollViewScript : MonoBehaviour {
 	public Object cell_prototype;
 	public GameObject parent;
 	public Canvas canvas;
+	public Scrollbar scrollbar;
 	private ArrayList cells = new ArrayList();
 	private float last_position = 2.3f;
 	private float CELL_SPACING = 0.2f;
@@ -24,14 +25,16 @@ public class ScrollViewScript : MonoBehaviour {
 
 		Vector3[] corners = new Vector3[4];
 		cell.GetComponentInParent<RectTransform> ().GetWorldCorners (corners);
-//		if (
+//		
 		
 	}
 
-	void Start() {
+	public IEnumerator Start() {
 		for (int i = 1; i < 25; i++) {
 			string name = "Meal #" + i.ToString();
 			create_cell (name);
 		}
+		yield return null;
+		scrollbar.value = 1;
 	}
 }

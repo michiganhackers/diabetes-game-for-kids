@@ -17,3 +17,7 @@ EditorBuildSettings:
     path: Assets/ParentAssets/Standard Assets/John.unity
   - enabled: 1
     path: Assets/CarbCounter/Meals.unity
+  - enabled: 1
+    path: Assets/CarbCounter/CarbCounter.unity
+  - enabled: 1
+    path: Assets/CarbCounter/AddMeal.unity
