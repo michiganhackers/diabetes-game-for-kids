@@ -1,0 +1,43 @@
+<Introduce>
+Hello, my name is Jawad and here are my fellow teammates- Shayna, Spruce, [follow order on slides]
+
+We want to talk to you about our solution for kids who have problems with dealing with their type 1 diabetes
+
+<Next Slide: Ultimate Goal>
+In the end, our solution will help children..... <read off of side basically>
+However, before going into how the game will be implemented, I want to talk about another related example-
+
+<Next Slide: Example>
+a game developed by a father for his son who has cystic fibrosis. The issue here was to have the child sit down and breathe through a nebulizer regularly and properly- and these treatments are difficult even for adults.
+
+<Next Slide: Cystic Fibrosis Issue + Soln>
+The issue at hand was that young children naturally don't want to sit down and breathe through a nebulizer- and when they finally sit down with the machine, they actually have to breathe slowly and deeply.
+The solution, however, was to attach a simple device to any nebulizer and allow the kids to play games that react to how they use the nebulizer. The game immerses the children in such a way that how well they do in the game relies on how well they use the nebulizer- such as moving this hot air balloon up and down.
+
+<Next Slide: Our Issue At Hand>
+Most children don't want to count carbs and watch their every meal, much less pricking their fingers to check their blood glucose levels periodically. Parents or other adults can't watch a child in every situation- and children don't tend to consistently do something they don't like outside of supervision.
+
+Furthermore, children are finicky and picky- forcing them to play a simple game over and over again to learn habits they have to think about throughout their day won't cut it.
+
+In the cystic fibrosis example, the child only needs to do whatever one of the three different game tells them- there's no long-term thinking involved that stays over their head like a dark cloud. Unlike the cystic fibrosis example, the children actually have to LEARN long-term habits.
+
+<Next Slide: Our Soln>
+That's why we're creating an immersive mobile game - for both iOS and Android devices. Without getting too far into the actual gameplay, the game will allow the child to enjoy themselves while facilitating asking the child for their carbs per meal or say, their blood glucose levels. In return, the child will earn in-game rewards which they will be proud of.
+
+For the parents, the data will be easily managed and presented for them- reported carbs per meal, when the child reported each piece of data, trends over the week, and anything else that could possibly help the parents and their medical team.
+
+<Next Slide: Reach Features>
+Now, let's go over what this game could actually provide to all parties involved
+-> A well-done immersive game - like the cystic fibrosis example - doesn't need to explain what's so important. However, this game could teach the children why they have to prick their fingers, why it's so important they don't eat that ice cream.
+-> Community: Allow the kids to play with one another and make the game feel far more substantial, including the rewards for correctly reporting the carbs
+-> We could even include chilren without diabetes- this ultimately isn't a simple interface for kids with type 1 diabetes. The game doesn't have to ostracize children when they're supposed to enjoy themselves
+-> Why ask a parent to throw a strange game at their child? Why not let the parent directly interact with the child?
+
+<Next Slide: Current Example>
+As for right now, we have a simpler game. The child chooses a pet that they take care of, which includes earning coins by completing tasks. If a child misses a task, the pet responds appropriately- gets sad, hungry, sick, etc as feedback the child can understand
+Parents can set the necessary carbs per meal, when the child should be notified of the tasks, reminders to update settings, and more.
+In addition, the parents can view all the data that they need from within the app, particularly the reported carbs from their child.
+
+<Next Slide: This Semester>
+And this is the plan for the example- get an Android and iOS app running that has these features of the game.
+[Read off slide, I need to use the bathroom, eh wing the end]
