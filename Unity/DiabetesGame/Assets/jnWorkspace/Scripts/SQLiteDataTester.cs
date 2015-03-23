@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class SQLiteDataTesterOriginalzBS : MonoBehaviour {
+public class SQLiteDataTester : MonoBehaviour {
 
     public bool resetDatabase = false; // If checked, will reset entire database
     public string DBKey = "dat key"; // Database is encrypted, this is the key
