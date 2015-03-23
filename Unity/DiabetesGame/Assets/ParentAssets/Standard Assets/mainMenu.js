@@ -31,3 +31,11 @@ function CharCreate () {
 function CarbCtr () {
 	Application.LoadLevel( "CarbCounter" );
 }
+
+function AddMeals () {
+	Application.LoadLevel( "AddMeal" );
+}
+
+function Meal () {
+	Application.LoadLevel( "Meals" );
+}
