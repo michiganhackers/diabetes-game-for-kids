@@ -23,3 +23,7 @@ function AddNew () {
 function OpenJohn () {
 	Application.LoadLevel( "John" );
 }
+
+function CharCreate () {
+	Application.LoadLevel( "CharacterCreator" );
+}
