@@ -16,6 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+      <activity
+        android:name=".Core.SendActivity"
+        android:label="@string/send"
+        android:parentActivityName=".Core.MainActivity"
+        >
+        <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value=".Core.MainActivity"
+          />
+      </activity>
     </application>
 
 </manifest>

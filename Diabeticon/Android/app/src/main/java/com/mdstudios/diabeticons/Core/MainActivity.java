@@ -1,6 +1,7 @@
 package com.mdstudios.diabeticons.Core;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.ActionBarActivity;
@@ -20,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mdstudios.diabeticons.R;
+import com.mdstudios.diabeticons.Utils.Util;
 
 import java.io.IOException;
 import java.util.LinkedList;
@@ -62,11 +64,16 @@ public class MainActivity extends ActionBarActivity {
     mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
       @Override
       public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        // Get the title and image from the view
-        Drawable image = mAdapter.getImage(position);
+        // Get the title and path to the image from the adapter
+        String path = mAdapter.getPath(position);
         String title = mAdapter.getTitle(position);
 
         Toast.makeText(MainActivity.this, title + " was clicked!", Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(MainActivity.this, SendActivity.class);
+        intent.putExtra(Util.KEY_PATH, path);
+        intent.putExtra(Util.KEY_TITLE, title);
+        startActivity(intent);
       }
     });
 
@@ -127,8 +134,9 @@ public class MainActivity extends ActionBarActivity {
   private class IconListAdapter extends BaseAdapter {
     Context mContext;
 
-    String[] mTitles;             // The titles for each item
-    LinkedList<Drawable> mImages;  // All the images for each item
+    LinkedList<String> mPaths;      // The assets path for each item
+    LinkedList<String> mTitles;     // The display-ready title for each item
+    LinkedList<Drawable> mImages;   // All the images for each item
 
     public IconListAdapter(Context context) {
       this.mContext = context;
@@ -137,25 +145,29 @@ public class MainActivity extends ActionBarActivity {
       AssetManager assetManager = context.getAssets(); // Necessary to access assets
       try {
         // Get all the file names
-        mTitles = assetManager.list("diabeticons"); // "diabeticons" = path
+        String[] files = assetManager.list("diabeticons"); // "diabeticons" = path
 
         // Save all the names and images
+        mPaths = new LinkedList<>();
+        mTitles = new LinkedList<>();
         mImages = new LinkedList<>();
-        for(int i = 0; i < mTitles.length; ++i) {
-          // TODO: Get and cache the appropriate image
+        for(int i = 0; i < files.length; ++i) {
           // Cache the image for this item from its file path
-          String path = "diabeticons/" + mTitles[i];
+          String path = "diabeticons/" + files[i];
           Drawable d = Drawable.createFromStream(getAssets().open(path), null);
           mImages.add(d);
 
+          // Cache the path, for later use
+          mPaths.add(path);
+
           // Get the simplified, displayable name (no .filetype, no nyNameIsFrankenstein)
-          String simplerName = mTitles[i].substring(0, mTitles[i].indexOf('.'));
+          String simplerName = files[i].substring(0, files[i].indexOf('.'));
             // Looks for a lower case followed by an upper case, adds space between
             // Source: http://stackoverflow.com/questions/4886091/insert-space-after-capital-letter
           String simplerNameFinal = simplerName.replaceAll("(\\p{Ll})(\\p{Lu})","$1 $2");
 
-          // Replace the title with the easier-to-read title
-          mTitles[i] = simplerNameFinal;
+          // Save the easier-to-read title
+          mTitles.add(simplerNameFinal);
         }
 
       } catch (IOException e) {
@@ -164,17 +176,21 @@ public class MainActivity extends ActionBarActivity {
       }
     }
 
+    public String getPath(int position) {
+      return mPaths.get(position);
+    }
+
     public Drawable getImage(int position) {
       return mImages.get(position);
     }
 
     public String getTitle(int position) {
-      return mTitles[position];
+      return mTitles.get(position);
     }
 
     @Override
     public int getCount() {
-      return mTitles.length;
+      return mTitles.size();
     }
 
     @Override

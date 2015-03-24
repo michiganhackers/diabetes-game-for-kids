@@ -23,7 +23,7 @@
     android:layout_gravity="center_vertical"
     android:layout_marginLeft="@dimen/general"
     android:text="TEST TEST TEST"
-    android:textSize="25sp"
+    android:textSize="@dimen/textsize_default"
     android:textColor="@color/black"
     />
   

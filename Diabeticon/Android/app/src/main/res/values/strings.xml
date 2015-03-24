@@ -3,4 +3,7 @@
 
   <string name="hello_world">Hello world!</string>
   <string name="action_settings">Settings</string>
+
+  <!-- Basic UI Text -->
+  <string name="send">Send</string>
 </resources>

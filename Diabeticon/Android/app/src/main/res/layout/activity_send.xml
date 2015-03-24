@@ -1,0 +1,65 @@
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  tools:context=".SendActivity">
+
+  <include layout="@layout/toolbar_main"/>
+
+  <!-- main content view -->
+  <RelativeLayout
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/general"
+        android:text="TEST TEST TEST"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_default"/>
+
+      <ImageView
+        android:id="@+id/image"
+        android:layout_margin="@dimen/general"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/general"
+        android:src="@drawable/ic_drawer"/>
+
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerInParent="true"
+          android:text="@string/send"
+          android:textColor="@color/mAccentDark"
+          android:textSize="@dimen/textsize_default"
+        />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- Shadow under the toolbar -->
+    <include layout="@layout/toolbar_shadow" />
+
+  </RelativeLayout>
+
+</LinearLayout>
