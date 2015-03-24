@@ -1,4 +1,4 @@
-package com.mdstudios.diabeticons;
+package com.mdstudios.diabeticons.Core;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -12,13 +12,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.mdstudios.diabeticons.R;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -28,6 +32,7 @@ public class MainActivity extends ActionBarActivity {
   Toolbar mToolbar;
 
   ListView mListView;
+  IconListAdapter mAdapter;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +55,20 @@ public class MainActivity extends ActionBarActivity {
     mListView = (ListView) findViewById(R.id.listview);
 
     // Give it the appropriate adapter
-    IconListAdapter adapter = new IconListAdapter(this);
-    mListView.setAdapter(adapter);
+    mAdapter = new IconListAdapter(this);
+    mListView.setAdapter(mAdapter);
+
+    // Set the click listener for the ListView
+    mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+      @Override
+      public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        // Get the title and image from the view
+        Drawable image = mAdapter.getImage(position);
+        String title = mAdapter.getTitle(position);
+
+        Toast.makeText(MainActivity.this, title + " was clicked!", Toast.LENGTH_SHORT).show();
+      }
+    });
 
     //testAllImages();
   }
@@ -111,7 +128,7 @@ public class MainActivity extends ActionBarActivity {
     Context mContext;
 
     String[] mTitles;             // The titles for each item
-    ArrayList<Drawable> mImages;  // All the images for each item
+    LinkedList<Drawable> mImages;  // All the images for each item
 
     public IconListAdapter(Context context) {
       this.mContext = context;
@@ -123,7 +140,7 @@ public class MainActivity extends ActionBarActivity {
         mTitles = assetManager.list("diabeticons"); // "diabeticons" = path
 
         // Save all the names and images
-        mImages = new ArrayList<>();
+        mImages = new LinkedList<>();
         for(int i = 0; i < mTitles.length; ++i) {
           // TODO: Get and cache the appropriate image
           // Cache the image for this item from its file path
@@ -145,6 +162,14 @@ public class MainActivity extends ActionBarActivity {
         Log.e(LOGTAG, "There was an error! Error: " + e.toString());
         e.printStackTrace();
       }
+    }
+
+    public Drawable getImage(int position) {
+      return mImages.get(position);
+    }
+
+    public String getTitle(int position) {
+      return mTitles[position];
     }
 
     @Override
@@ -187,8 +212,8 @@ public class MainActivity extends ActionBarActivity {
       }
 
       // Set the title and icon of this item according to the position
-      holder.title.setText(mTitles[position]);
-      holder.icon.setImageDrawable(mImages.get(position));
+      holder.title.setText(getTitle(position));
+      holder.icon.setImageDrawable(getImage(position));
 
       return row;
     }

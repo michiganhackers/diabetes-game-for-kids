@@ -3,8 +3,8 @@
   android:orientation="horizontal"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
-  android:background="@color/white"
-  android:padding = "@dimen/general"
+  android:background="@drawable/background_list_itemselect"
+  android:padding="@dimen/general"
   >
 
   <!-- Image Icon -->
