@@ -6,4 +6,5 @@
 
   <!-- Basic UI Text -->
   <string name="send">Send</string>
+  <string name="share_chooser_title">Share to...</string>
 </resources>

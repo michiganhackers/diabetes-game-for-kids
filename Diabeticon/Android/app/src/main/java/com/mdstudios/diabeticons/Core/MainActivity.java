@@ -18,7 +18,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.mdstudios.diabeticons.R;
 import com.mdstudios.diabeticons.Utils.Util;
@@ -67,8 +66,6 @@ public class MainActivity extends ActionBarActivity {
         // Get the title and path to the image from the adapter
         String path = mAdapter.getPath(position);
         String title = mAdapter.getTitle(position);
-
-        Toast.makeText(MainActivity.this, title + " was clicked!", Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(MainActivity.this, SendActivity.class);
         intent.putExtra(Util.KEY_PATH, path);

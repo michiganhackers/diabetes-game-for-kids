@@ -1,10 +1,16 @@
 package com.mdstudios.diabeticons.Core;
 
+import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,7 +29,7 @@ public class SendActivity extends ActionBarActivity {
 
   Toolbar mToolbar;
   String mTitle;    // Title of this item
-  Drawable mImage;  // The actual image for this item
+  ImageView mImageView;  // The actual image for this item
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -50,18 +56,50 @@ public class SendActivity extends ActionBarActivity {
 
       // Get the image for this item and set the image preview
       try {
-        mImage = Drawable.createFromStream(getAssets().open(path), null);
+        Drawable drawable = Drawable.createFromStream(getAssets().open(path), null);
 
-        ImageView imageView = (ImageView) findViewById(R.id.image);
-        imageView.setImageDrawable(mImage);
+        mImageView = (ImageView) findViewById(R.id.image);
+        mImageView.setImageDrawable(drawable);
+
       } catch (IOException e) {
         Log.e(LOGTAG, "There was an error! Error: " + e.toString());
         e.printStackTrace();
       }
+
+      // Set the send button to actually send the image
+      Button sendButton = (Button) findViewById(R.id.button_send);
+      sendButton.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+          sendImage();
+        }
+      });
     }
     else {
       // Something must've went wrong- throw an error to the log
       Log.e(LOGTAG, "No extras bundle was passed in!");
     }
+  }
+
+  // Sends an intent to share the image that was passed to this Activity
+  private void sendImage() {
+    // Create the special share content path (can't share images directly from assets)
+    String sharePath = MediaStore.Images.Media.insertImage(
+        getContentResolver(),
+        ((BitmapDrawable)mImageView.getDrawable()).getBitmap(),
+        mTitle,
+        null
+    );
+    Uri imageUri = Uri.parse(sharePath);
+
+    // Create the intent
+    Intent shareIntent = new Intent(Intent.ACTION_SEND);
+    shareIntent.putExtra(Intent.EXTRA_STREAM, imageUri);
+    shareIntent.setType("image/png");
+
+    // Send the intent finally (and always use the chooser dialogue)
+    startActivity(
+        Intent.createChooser(shareIntent, getResources().getText(R.string.share_chooser_title))
+    );
   }
 }
