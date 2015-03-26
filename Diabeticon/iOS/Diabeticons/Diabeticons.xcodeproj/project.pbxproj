@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		95A5E35E1AC275C0009B2410 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5E35D1AC275C0009B2410 /* AppDelegate.swift */; };
+		95A5E3611AC275C0009B2410 /* Diabeticons.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95A5E35F1AC275C0009B2410 /* Diabeticons.xcdatamodeld */; };
+		95A5E3631AC275C0009B2410 /* ImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5E3621AC275C0009B2410 /* ImageListViewController.swift */; };
+		95A5E3661AC275C0009B2410 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95A5E3641AC275C0009B2410 /* Main.storyboard */; };
+		95A5E3681AC275C0009B2410 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95A5E3671AC275C0009B2410 /* Images.xcassets */; };
+		95A5E36B1AC275C0009B2410 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95A5E3691AC275C0009B2410 /* LaunchScreen.xib */; };
+		95A5E3771AC275C0009B2410 /* DiabeticonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5E3761AC275C0009B2410 /* DiabeticonsTests.swift */; };
+		95A5E3811AC27EED009B2410 /* IconEnumerater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5E3801AC27EED009B2410 /* IconEnumerater.swift */; };
+		95A5E3B51AC49B41009B2410 /* Library in Resources */ = {isa = PBXBuildFile; fileRef = 95A5E3B41AC49B41009B2410 /* Library */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		95A5E3711AC275C0009B2410 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95A5E3501AC275C0009B2410 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95A5E3571AC275C0009B2410;
+			remoteInfo = Diabeticons;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		95A5E3581AC275C0009B2410 /* Diabeticons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diabeticons.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95A5E35C1AC275C0009B2410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95A5E35D1AC275C0009B2410 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		95A5E3601AC275C0009B2410 /* Diabeticons.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Diabeticons.xcdatamodel; sourceTree = "<group>"; };
+		95A5E3621AC275C0009B2410 /* ImageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewController.swift; sourceTree = "<group>"; };
+		95A5E3651AC275C0009B2410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		95A5E3671AC275C0009B2410 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		95A5E36A1AC275C0009B2410 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		95A5E3701AC275C0009B2410 /* DiabeticonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiabeticonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95A5E3751AC275C0009B2410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95A5E3761AC275C0009B2410 /* DiabeticonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiabeticonsTests.swift; sourceTree = "<group>"; };
+		95A5E3801AC27EED009B2410 /* IconEnumerater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconEnumerater.swift; sourceTree = "<group>"; };
+		95A5E3B41AC49B41009B2410 /* Library */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Library; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95A5E3551AC275C0009B2410 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95A5E36D1AC275C0009B2410 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		95A5E34F1AC275C0009B2410 = {
+			isa = PBXGroup;
+			children = (
+				95A5E35A1AC275C0009B2410 /* Diabeticons */,
+				95A5E3731AC275C0009B2410 /* DiabeticonsTests */,
+				95A5E3591AC275C0009B2410 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		95A5E3591AC275C0009B2410 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95A5E3581AC275C0009B2410 /* Diabeticons.app */,
+				95A5E3701AC275C0009B2410 /* DiabeticonsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95A5E35A1AC275C0009B2410 /* Diabeticons */ = {
+			isa = PBXGroup;
+			children = (
+				95A5E35D1AC275C0009B2410 /* AppDelegate.swift */,
+				95A5E3621AC275C0009B2410 /* ImageListViewController.swift */,
+				95A5E3801AC27EED009B2410 /* IconEnumerater.swift */,
+				95A5E3641AC275C0009B2410 /* Main.storyboard */,
+				95A5E3671AC275C0009B2410 /* Images.xcassets */,
+				95A5E3691AC275C0009B2410 /* LaunchScreen.xib */,
+				95A5E35F1AC275C0009B2410 /* Diabeticons.xcdatamodeld */,
+				95A5E35B1AC275C0009B2410 /* Supporting Files */,
+			);
+			path = Diabeticons;
+			sourceTree = "<group>";
+		};
+		95A5E35B1AC275C0009B2410 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				95A5E3B41AC49B41009B2410 /* Library */,
+				95A5E35C1AC275C0009B2410 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		95A5E3731AC275C0009B2410 /* DiabeticonsTests */ = {
+			isa = PBXGroup;
+			children = (
+				95A5E3761AC275C0009B2410 /* DiabeticonsTests.swift */,
+				95A5E3741AC275C0009B2410 /* Supporting Files */,
+			);
+			path = DiabeticonsTests;
+			sourceTree = "<group>";
+		};
+		95A5E3741AC275C0009B2410 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				95A5E3751AC275C0009B2410 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95A5E3571AC275C0009B2410 /* Diabeticons */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95A5E37A1AC275C0009B2410 /* Build configuration list for PBXNativeTarget "Diabeticons" */;
+			buildPhases = (
+				95A5E3541AC275C0009B2410 /* Sources */,
+				95A5E3551AC275C0009B2410 /* Frameworks */,
+				95A5E3561AC275C0009B2410 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Diabeticons;
+			productName = Diabeticons;
+			productReference = 95A5E3581AC275C0009B2410 /* Diabeticons.app */;
+			productType = "com.apple.product-type.application";
+		};
+		95A5E36F1AC275C0009B2410 /* DiabeticonsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95A5E37D1AC275C0009B2410 /* Build configuration list for PBXNativeTarget "DiabeticonsTests" */;
+			buildPhases = (
+				95A5E36C1AC275C0009B2410 /* Sources */,
+				95A5E36D1AC275C0009B2410 /* Frameworks */,
+				95A5E36E1AC275C0009B2410 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95A5E3721AC275C0009B2410 /* PBXTargetDependency */,
+			);
+			name = DiabeticonsTests;
+			productName = DiabeticonsTests;
+			productReference = 95A5E3701AC275C0009B2410 /* DiabeticonsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95A5E3501AC275C0009B2410 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = michiganhackers;
+				TargetAttributes = {
+					95A5E3571AC275C0009B2410 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					95A5E36F1AC275C0009B2410 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 95A5E3571AC275C0009B2410;
+					};
+				};
+			};
+			buildConfigurationList = 95A5E3531AC275C0009B2410 /* Build configuration list for PBXProject "Diabeticons" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 95A5E34F1AC275C0009B2410;
+			productRefGroup = 95A5E3591AC275C0009B2410 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95A5E3571AC275C0009B2410 /* Diabeticons */,
+				95A5E36F1AC275C0009B2410 /* DiabeticonsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95A5E3561AC275C0009B2410 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95A5E3B51AC49B41009B2410 /* Library in Resources */,
+				95A5E3661AC275C0009B2410 /* Main.storyboard in Resources */,
+				95A5E36B1AC275C0009B2410 /* LaunchScreen.xib in Resources */,
+				95A5E3681AC275C0009B2410 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95A5E36E1AC275C0009B2410 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95A5E3541AC275C0009B2410 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95A5E3811AC27EED009B2410 /* IconEnumerater.swift in Sources */,
+				95A5E3631AC275C0009B2410 /* ImageListViewController.swift in Sources */,
+				95A5E35E1AC275C0009B2410 /* AppDelegate.swift in Sources */,
+				95A5E3611AC275C0009B2410 /* Diabeticons.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95A5E36C1AC275C0009B2410 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95A5E3771AC275C0009B2410 /* DiabeticonsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		95A5E3721AC275C0009B2410 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95A5E3571AC275C0009B2410 /* Diabeticons */;
+			targetProxy = 95A5E3711AC275C0009B2410 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		95A5E3641AC275C0009B2410 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95A5E3651AC275C0009B2410 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		95A5E3691AC275C0009B2410 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95A5E36A1AC275C0009B2410 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		95A5E3781AC275C0009B2410 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		95A5E3791AC275C0009B2410 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95A5E37B1AC275C0009B2410 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Diabeticons/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		95A5E37C1AC275C0009B2410 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Diabeticons/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		95A5E37E1AC275C0009B2410 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DiabeticonsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Diabeticons.app/Diabeticons";
+			};
+			name = Debug;
+		};
+		95A5E37F1AC275C0009B2410 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DiabeticonsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Diabeticons.app/Diabeticons";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95A5E3531AC275C0009B2410 /* Build configuration list for PBXProject "Diabeticons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95A5E3781AC275C0009B2410 /* Debug */,
+				95A5E3791AC275C0009B2410 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95A5E37A1AC275C0009B2410 /* Build configuration list for PBXNativeTarget "Diabeticons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95A5E37B1AC275C0009B2410 /* Debug */,
+				95A5E37C1AC275C0009B2410 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		95A5E37D1AC275C0009B2410 /* Build configuration list for PBXNativeTarget "DiabeticonsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95A5E37E1AC275C0009B2410 /* Debug */,
+				95A5E37F1AC275C0009B2410 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		95A5E35F1AC275C0009B2410 /* Diabeticons.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				95A5E3601AC275C0009B2410 /* Diabeticons.xcdatamodel */,
+			);
+			currentVersion = 95A5E3601AC275C0009B2410 /* Diabeticons.xcdatamodel */;
+			path = Diabeticons.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 95A5E3501AC275C0009B2410 /* Project object */;
+}
