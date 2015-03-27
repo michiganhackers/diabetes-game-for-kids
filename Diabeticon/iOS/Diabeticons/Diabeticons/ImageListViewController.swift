@@ -10,10 +10,10 @@ import UIKit
 
 class ImageListViewController: UITableViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 75
-        let n = IconEnumerator()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -24,11 +24,18 @@ class ImageListViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("emoticell") as UITableViewCell
+        let index = indexPath.row
+        let image = IconEnumerator.sharedInstance.icons[index]
+        let name = image.name
+        let label = cell.contentView.viewWithTag(1) as UILabel
+        label.text = name
+        let imageview = cell.contentView.viewWithTag(2) as UIImageView
+        imageview.image = image
         return cell
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return IconEnumerator.sharedInstance.icons.count
     }
 
 }

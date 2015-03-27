@@ -9,8 +9,15 @@
 import Foundation
 import UIKit
 
+let IconEnumeratorSharedInstance = IconEnumerator()
+
 class IconEnumerator : NSObject {
     var icons : [NamedImage]
+    
+    class var sharedInstance: IconEnumerator {
+        return IconEnumeratorSharedInstance
+    }
+    
     override init() {
         icons = []
         var path = NSBundle.mainBundle().resourcePath! + "/Library"
