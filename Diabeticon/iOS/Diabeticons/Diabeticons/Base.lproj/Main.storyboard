@@ -90,12 +90,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ybR-2E-Fh5">
-                                <rect key="frame" x="248" y="219" width="105" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="105" id="VUK-sn-NAK"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S37-P5-TaJ">
                                 <rect key="frame" x="255" y="522" width="91" height="58"/>
                                 <constraints>
@@ -110,11 +104,17 @@
                                     <action selector="shareButtonPressed:" destination="ETE-rF-uoc" eventType="touchUpInside" id="ktX-gp-iy7"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ybR-2E-Fh5">
+                                <rect key="frame" x="209" y="174" width="182" height="133"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="VUK-sn-NAK"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ybR-2E-Fh5" firstAttribute="top" secondItem="fOP-me-9a5" secondAttribute="bottom" constant="155" id="C5t-Ha-hYE"/>
-                            <constraint firstItem="wXe-H5-i2E" firstAttribute="top" secondItem="ybR-2E-Fh5" secondAttribute="bottom" constant="318" id="FMt-yc-njc"/>
+                            <constraint firstItem="ybR-2E-Fh5" firstAttribute="top" secondItem="fOP-me-9a5" secondAttribute="bottom" constant="110" id="C5t-Ha-hYE"/>
+                            <constraint firstItem="wXe-H5-i2E" firstAttribute="top" secondItem="ybR-2E-Fh5" secondAttribute="bottom" constant="293" id="FMt-yc-njc"/>
                             <constraint firstItem="S37-P5-TaJ" firstAttribute="centerX" secondItem="ybR-2E-Fh5" secondAttribute="centerX" id="c1P-qh-ofL"/>
                             <constraint firstAttribute="bottom" secondItem="S37-P5-TaJ" secondAttribute="bottom" constant="20" symbolic="YES" id="eza-vu-ahr"/>
                             <constraint firstItem="ybR-2E-Fh5" firstAttribute="centerX" secondItem="on1-7t-ccy" secondAttribute="centerX" id="hx0-1h-Kmw"/>

@@ -13,9 +13,34 @@ class SendViewController: UIViewController, MFMessageComposeViewControllerDelega
     var image: NamedImage? = nil
     @IBOutlet var imageview: UIImageView!
     @IBAction func shareButtonPressed(sender: UIButton) {
+        shareWithActivityMenu()
+    }
+    
+    func sendAsSms() {
         let messageview = MFMessageComposeViewController(rootViewController: self)
         messageview.addAttachmentURL(image?.url, withAlternateFilename: "") // TODO: add default file
         presentViewController(messageview, animated: true, completion: nil)
+    }
+    
+    func shareWithActivityMenu() {
+        let activity_view = UIActivityViewController(activityItems: [image!.url], applicationActivities: nil)
+        if activity_view.respondsToSelector("popoverPresentationController") &&
+           (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad){
+            
+            let popover = UIPopoverController(contentViewController: activity_view)
+            popover.presentPopoverFromRect(
+                CGRect(x: self.view.frame.size.width/2,
+                    y: self.view.frame.size.height,
+                    width: 0, height: 0),
+                inView: self.view,
+                permittedArrowDirections: UIPopoverArrowDirection.Any,
+                animated: true)
+
+            
+        } else {
+            presentViewController(activity_view, animated: true, completion: nil)
+        }
+
         
     }
     
@@ -26,6 +51,8 @@ class SendViewController: UIViewController, MFMessageComposeViewControllerDelega
         if image != nil {
             imageview.image = image
             navigationItem.title = image!.name
+        } else {
+            self.navigationController?.popToRootViewControllerAnimated(false)
         }
     }
 }
