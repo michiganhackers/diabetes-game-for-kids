@@ -16,6 +16,7 @@
 		95A5E3771AC275C0009B2410 /* DiabeticonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5E3761AC275C0009B2410 /* DiabeticonsTests.swift */; };
 		95A5E3811AC27EED009B2410 /* IconEnumerater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5E3801AC27EED009B2410 /* IconEnumerater.swift */; };
 		95A5E3B51AC49B41009B2410 /* Library in Resources */ = {isa = PBXBuildFile; fileRef = 95A5E3B41AC49B41009B2410 /* Library */; };
+		95E53C071AC4FBA800220F15 /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E53C061AC4FBA800220F15 /* SendViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		95A5E3761AC275C0009B2410 /* DiabeticonsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiabeticonsTests.swift; sourceTree = "<group>"; };
 		95A5E3801AC27EED009B2410 /* IconEnumerater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconEnumerater.swift; sourceTree = "<group>"; };
 		95A5E3B41AC49B41009B2410 /* Library */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Library; sourceTree = "<group>"; };
+		95E53C061AC4FBA800220F15 /* SendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +85,11 @@
 		95A5E35A1AC275C0009B2410 /* Diabeticons */ = {
 			isa = PBXGroup;
 			children = (
+				95A5E3641AC275C0009B2410 /* Main.storyboard */,
 				95A5E35D1AC275C0009B2410 /* AppDelegate.swift */,
 				95A5E3621AC275C0009B2410 /* ImageListViewController.swift */,
+				95E53C061AC4FBA800220F15 /* SendViewController.swift */,
 				95A5E3801AC27EED009B2410 /* IconEnumerater.swift */,
-				95A5E3641AC275C0009B2410 /* Main.storyboard */,
 				95A5E3671AC275C0009B2410 /* Images.xcassets */,
 				95A5E3691AC275C0009B2410 /* LaunchScreen.xib */,
 				95A5E35F1AC275C0009B2410 /* Diabeticons.xcdatamodeld */,
@@ -225,6 +228,7 @@
 				95A5E3811AC27EED009B2410 /* IconEnumerater.swift in Sources */,
 				95A5E3631AC275C0009B2410 /* ImageListViewController.swift in Sources */,
 				95A5E35E1AC275C0009B2410 /* AppDelegate.swift in Sources */,
+				95E53C071AC4FBA800220F15 /* SendViewController.swift in Sources */,
 				95A5E3611AC275C0009B2410 /* Diabeticons.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +423,7 @@
 				95A5E37C1AC275C0009B2410 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		95A5E37D1AC275C0009B2410 /* Build configuration list for PBXNativeTarget "DiabeticonsTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +432,7 @@
 				95A5E37F1AC275C0009B2410 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -21,16 +21,16 @@
             </objects>
             <point key="canvasLocation" x="-166" y="378"/>
         </scene>
-        <!--Image List View Controller-->
+        <!--Diabeticon-->
         <scene sceneID="glO-vp-qC8">
             <objects>
                 <tableViewController id="wKT-aM-d3p" customClass="ImageListViewController" customModule="Diabeticons" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OZG-pa-f3P">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="OZG-pa-f3P">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="emoticell" rowHeight="75" id="Zdt-eE-xlF">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="emoticell" rowHeight="75" id="Zdt-eE-xlF">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zdt-eE-xlF" id="VSH-lF-orC">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -60,6 +60,9 @@
                                         <constraint firstItem="Qu1-BO-BDR" firstAttribute="top" secondItem="VSH-lF-orC" secondAttribute="topMargin" constant="11" id="btV-cF-a9L"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ETE-rF-uoc" kind="show" identifier="send_segue" id="41w-05-ROS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -67,11 +70,63 @@
                             <outlet property="delegate" destination="wKT-aM-d3p" id="b47-Cn-Wf0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="aYb-MG-WF9"/>
+                    <navigationItem key="navigationItem" title="Diabeticon" id="aYb-MG-WF9">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="gQb-TV-l9D"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oA3-Hy-xNh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="602" y="378"/>
+        </scene>
+        <!--Send View Controller-->
+        <scene sceneID="eQJ-6N-lsx">
+            <objects>
+                <viewController id="ETE-rF-uoc" customClass="SendViewController" customModule="Diabeticons" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fOP-me-9a5"/>
+                        <viewControllerLayoutGuide type="bottom" id="wXe-H5-i2E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="on1-7t-ccy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ybR-2E-Fh5">
+                                <rect key="frame" x="248" y="219" width="105" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="VUK-sn-NAK"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S37-P5-TaJ">
+                                <rect key="frame" x="255" y="522" width="91" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="GHu-v0-zAr"/>
+                                    <constraint firstAttribute="width" constant="91" id="wWu-Kd-YHi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButtonPressed:" destination="ETE-rF-uoc" eventType="touchUpInside" id="ktX-gp-iy7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ybR-2E-Fh5" firstAttribute="top" secondItem="fOP-me-9a5" secondAttribute="bottom" constant="155" id="C5t-Ha-hYE"/>
+                            <constraint firstItem="wXe-H5-i2E" firstAttribute="top" secondItem="ybR-2E-Fh5" secondAttribute="bottom" constant="318" id="FMt-yc-njc"/>
+                            <constraint firstItem="S37-P5-TaJ" firstAttribute="centerX" secondItem="ybR-2E-Fh5" secondAttribute="centerX" id="c1P-qh-ofL"/>
+                            <constraint firstAttribute="bottom" secondItem="S37-P5-TaJ" secondAttribute="bottom" constant="20" symbolic="YES" id="eza-vu-ahr"/>
+                            <constraint firstItem="ybR-2E-Fh5" firstAttribute="centerX" secondItem="on1-7t-ccy" secondAttribute="centerX" id="hx0-1h-Kmw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageview" destination="ybR-2E-Fh5" id="VA0-CJ-cBE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oEo-lS-xnv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1382" y="378"/>
         </scene>
     </scenes>
     <resources>

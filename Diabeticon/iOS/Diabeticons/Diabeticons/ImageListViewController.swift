@@ -14,25 +14,30 @@ class ImageListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 75
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "send_segue" {
+            let dest = segue.destinationViewController as SendViewController
+            dest.image = IconEnumerator.sharedInstance.icons[tableView.indexPathForSelectedRow()!.row]
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("emoticell") as UITableViewCell
-        let index = indexPath.row
-        let image = IconEnumerator.sharedInstance.icons[index]
-        let name = image.name
+        let image = IconEnumerator.sharedInstance.icons[indexPath.row]
         let label = cell.contentView.viewWithTag(1) as UILabel
-        label.text = name
+        label.text = image.name
         let imageview = cell.contentView.viewWithTag(2) as UIImageView
         imageview.image = image
         return cell
     }
+
+    
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return IconEnumerator.sharedInstance.icons.count

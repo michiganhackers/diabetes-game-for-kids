@@ -34,13 +34,16 @@ class IconEnumerator : NSObject {
 
 class NamedImage : UIImage {
     var name: String
+    var url: NSURL
     init?(name: String, filepath: String) {
         self.name = name
+        self.url = NSURL(fileURLWithPath: filepath)!
         super.init(contentsOfFile: filepath)
     }
 
     required init(coder aDecoder: NSCoder) {
         name = aDecoder.decodeObjectForKey("name") as String
+        url = aDecoder.decodeObjectForKey("url") as NSURL
         super.init(coder: aDecoder)
     }
 }
