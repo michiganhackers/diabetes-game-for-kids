@@ -2,9 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mdstudios.diabeticons" >
 
-  <!-- To temporarily store the image to share -->
-  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
   <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -29,6 +26,12 @@
           android:value=".Core.MainActivity"
           />
       </activity>
+
+      <provider
+        android:name="com.mdstudios.diabeticons.Utils.AssetsProvider"
+        android:authorities="com.mdstudios.diabeticons"
+        android:grantUriPermissions="true"
+        android:exported="true" />
     </application>
 
 </manifest>

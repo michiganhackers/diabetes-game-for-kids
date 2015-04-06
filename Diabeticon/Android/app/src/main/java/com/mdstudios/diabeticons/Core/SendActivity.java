@@ -29,6 +29,7 @@ public class SendActivity extends ActionBarActivity {
 
   Toolbar mToolbar;
   String mTitle;    // Title of this item
+  String mFilePath;      // File path to this file, ie assets/mFilePath
   ImageView mImageView;  // The actual image for this item
 
   @Override
@@ -48,7 +49,7 @@ public class SendActivity extends ActionBarActivity {
     if(extras != null) {
       // Get the passed in data
       mTitle = extras.getString(Util.KEY_TITLE);
-      String path = extras.getString(Util.KEY_PATH);
+      mFilePath = extras.getString(Util.KEY_PATH);
 
       // Set the title ofthe title view
       TextView titleText = (TextView) findViewById(R.id.title);
@@ -56,7 +57,7 @@ public class SendActivity extends ActionBarActivity {
 
       // Get the image for this item and set the image preview
       try {
-        Drawable drawable = Drawable.createFromStream(getAssets().open(path), null);
+        Drawable drawable = Drawable.createFromStream(getAssets().open(mFilePath), null);
 
         mImageView = (ImageView) findViewById(R.id.image);
         mImageView.setImageDrawable(drawable);
@@ -83,19 +84,13 @@ public class SendActivity extends ActionBarActivity {
 
   // Sends an intent to share the image that was passed to this Activity
   private void sendImage() {
-    // Create the special share content path (can't share images directly from assets)
-    String sharePath = MediaStore.Images.Media.insertImage(
-        getContentResolver(),
-        ((BitmapDrawable)mImageView.getDrawable()).getBitmap(),
-        mTitle,
-        null
-    );
-    Uri imageUri = Uri.parse(sharePath);
+    // Create the uri path to the image itself [thank you AssetsProvider Utils class]
+    Uri imageUri = Uri.parse("content://com.mdstudios.diabeticons/" + mFilePath);
 
-    // Create the intent
+    // Create a general implicit intent with just the image
     Intent shareIntent = new Intent(Intent.ACTION_SEND);
+    shareIntent.setType("image/*");
     shareIntent.putExtra(Intent.EXTRA_STREAM, imageUri);
-    shareIntent.setType("image/png");
 
     // Send the intent finally (and always use the chooser dialogue)
     startActivity(
