@@ -1,0 +1,10 @@
+<resources>
+  <string name="app_name">Hackercons</string>
+
+  <string name="hello_world">Hello world!</string>
+  <string name="action_settings">Settings</string>
+
+  <!-- Basic UI Text -->
+  <string name="send">Send</string>
+  <string name="share_chooser_title">Share to...</string>
+</resources>

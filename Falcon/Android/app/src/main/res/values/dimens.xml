@@ -1,0 +1,16 @@
+<resources>
+  <!-- Default screen margins, per the Android Design guidelines. -->
+  <dimen name="activity_horizontal_margin">16dp</dimen>
+  <dimen name="activity_vertical_margin">16dp</dimen>
+
+  <!-- General Dimens -->
+  <dimen name="general">10dp</dimen> <!-- For general padding+margins -->
+
+  <!-- Elevations -->
+  <dimen name="elevation_toolbar">0dp</dimen> <!-- Using custom dropshadow instead -->
+  <dimen name="dropshadow_toolbar">5dp</dimen>
+
+  <!-- Text Sizes -->
+  <dimen name="textsize_default">25sp</dimen>
+
+</resources>
