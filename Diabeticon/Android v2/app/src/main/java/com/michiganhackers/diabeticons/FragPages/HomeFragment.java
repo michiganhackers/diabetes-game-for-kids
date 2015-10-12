@@ -1,0 +1,57 @@
+package com.michiganhackers.diabeticons.FragPages;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
+import com.michiganhackers.diabeticons.Core.MainActivity;
+import com.michiganhackers.diabeticons.Core.SendActivity;
+import com.michiganhackers.diabeticons.R;
+import com.michiganhackers.diabeticons.Util.IconListAdapter;
+import com.michiganhackers.diabeticons.Util.Util;
+
+/**
+ * Created by jawad on 12/10/15.
+ */
+public class HomeFragment extends Fragment {
+
+    ListView mIconList;
+    IconListAdapter mAdapter;
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View v =inflater.inflate(R.layout.frag_home,container,false);
+        mIconList = (ListView) v.findViewById(R.id.listview);
+        return v;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        // Give it the appropriate adapter
+        mAdapter = new IconListAdapter(getActivity());
+        mIconList.setAdapter(mAdapter);
+
+        // Set the click listener for the ListView
+        mIconList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Get the title and path to the image from the adapter
+                String path = mAdapter.getPath(position);
+                String title = mAdapter.getTitle(position);
+
+                Intent intent = new Intent(getActivity(), SendActivity.class);
+                intent.putExtra(Util.KEY_PATH, path);
+                intent.putExtra(Util.KEY_TITLE, title);
+                startActivity(intent);
+            }
+        });
+    }
+}

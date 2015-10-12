@@ -5,10 +5,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.michiganhackers.diabeticons.Pages.FavoriteFragment;
-import com.michiganhackers.diabeticons.Pages.HomeFragment;
-import com.michiganhackers.diabeticons.Pages.MoreFragment;
-import com.michiganhackers.diabeticons.Pages.RecentFragment;
+import com.michiganhackers.diabeticons.FragPages.FavoriteFragment;
+import com.michiganhackers.diabeticons.FragPages.HomeFragment;
+import com.michiganhackers.diabeticons.FragPages.MoreFragment;
+import com.michiganhackers.diabeticons.FragPages.RecentFragment;
 
 import java.util.ArrayList;
 

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.michiganhackers.diabeticons" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Core.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Core.SendActivity"
+            android:label="@string/send"
+            android:parentActivityName=".Core.MainActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Core.MainActivity"
+                />
+        </activity>
+
+        <provider
+            android:name="com.michiganhackers.diabeticons.Util.AssetsProvider"
+            android:authorities="com.michiganhackers.diabeticons"
+            android:grantUriPermissions="true"
+            android:exported="true" />
+    </application>
+
+</manifest>

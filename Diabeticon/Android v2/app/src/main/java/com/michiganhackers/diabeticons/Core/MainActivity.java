@@ -1,4 +1,4 @@
-package com.michiganhackers.diabeticons;
+package com.michiganhackers.diabeticons.Core;
 
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.michiganhackers.diabeticons.R;
+import com.michiganhackers.diabeticons.SlidingTabLayout;
+import com.michiganhackers.diabeticons.ViewPagerAdapter;
 
 /**
  * Created by Edwin on 15/02/2015.
