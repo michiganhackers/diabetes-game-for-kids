@@ -1,4 +1,4 @@
-package com.michiganhackers.diabeticons;
+package com.michiganhackers.diabeticons.Pages;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,11 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * Created by Edwin on 15/02/2015.
- */
-public class Tab1 extends Fragment {
+import com.michiganhackers.diabeticons.R;
 
+/**
+ * Created by jawad on 12/10/15.
+ */
+public class MoreFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v =inflater.inflate(R.layout.tab_1,container,false);

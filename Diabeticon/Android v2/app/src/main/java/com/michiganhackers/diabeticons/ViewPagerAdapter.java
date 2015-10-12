@@ -5,6 +5,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
+import com.michiganhackers.diabeticons.Pages.FavoriteFragment;
+import com.michiganhackers.diabeticons.Pages.HomeFragment;
+import com.michiganhackers.diabeticons.Pages.MoreFragment;
+import com.michiganhackers.diabeticons.Pages.RecentFragment;
+
+import java.util.ArrayList;
+
 /**
  * Created by Edwin on 15/02/2015.
  */
@@ -13,6 +20,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     CharSequence Titles[]; // This will Store the Titles of the Tabs which are Going to be passed when ViewPagerAdapter is created
     int NumbOfTabs; // Store the number of tabs, this will also be passed when the ViewPagerAdapter is created
 
+    ArrayList<Fragment> mFragmentList;
 
     // Build a Constructor and assign the passed Values to appropriate values in the class
     public ViewPagerAdapter(FragmentManager fm,CharSequence mTitles[], int mNumbOfTabsumb) {
@@ -21,22 +29,17 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
         this.Titles = mTitles;
         this.NumbOfTabs = mNumbOfTabsumb;
 
+        mFragmentList = new ArrayList<>();
+        mFragmentList.add(new HomeFragment());
+        mFragmentList.add(new RecentFragment());
+        mFragmentList.add(new FavoriteFragment());
+        mFragmentList.add(new MoreFragment());
     }
 
     //This method return the fragment for the every position in the View Pager
     @Override
     public Fragment getItem(int position) {
-
-        if(position == 0) // if the position is 0 we are returning the First tab
-        {
-            Tab1 tab1 = new Tab1();
-            return tab1;
-        }
-        else             // As we are having 2 tabs if the position is now 0 it must be 1 so we are returning second tab
-        {
-            Tab2 tab2 = new Tab2();
-            return tab2;
-        }
+        return mFragmentList.get(position);
 
     }
 
