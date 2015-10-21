@@ -14,8 +14,8 @@ public class FeedbackActivity extends ActionBarActivity {
     Toolbar mToolbar;
 
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send);
 
         // Add the toolbar

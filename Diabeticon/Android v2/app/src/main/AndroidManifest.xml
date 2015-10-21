@@ -26,6 +26,37 @@
                 android:value=".Core.MainActivity"
                 />
         </activity>
+        <activity
+            android:name=".SubPages.AboutActivity"
+            android:label="@string/who_are_we"
+            android:parentActivityName=".Core.MainActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Core.MainActivity"
+                />
+        </activity>
+        <activity
+            android:name=".SubPages.FeedbackActivity"
+            android:label="@string/send_us_message"
+            android:parentActivityName=".Core.MainActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Core.MainActivity"
+                />
+        </activity>
+        <activity
+            android:name=".SubPages.ShareAppActivity"
+            android:label="@string/share_with_friends"
+            android:parentActivityName=".Core.MainActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Core.MainActivity"
+                />
+        </activity>
+
 
         <provider
             android:name="com.michiganhackers.diabeticons.Util.AssetsProvider"

@@ -1,5 +1,6 @@
 package com.michiganhackers.diabeticons.Core;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,10 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.michiganhackers.diabeticons.R;
+import com.michiganhackers.diabeticons.SubPages.AboutActivity;
+import com.michiganhackers.diabeticons.SubPages.FeedbackActivity;
+import com.michiganhackers.diabeticons.SubPages.SendActivity;
+import com.michiganhackers.diabeticons.SubPages.ShareAppActivity;
 
 /**
  * Created by jawad on 12/10/15.
@@ -45,14 +50,15 @@ public class MoreFragment extends Fragment {
     }
 
     private void choseAbout() {
-        Toast.makeText(getActivity(), "Chose about page", Toast.LENGTH_SHORT).show();
+//        Intent intent = new Intent(getActivity(), AboutActivity.cla)
+        startActivity(new Intent(getActivity(), AboutActivity.class));
     }
 
     private void choseFeedback() {
-        Toast.makeText(getActivity(), "Chose feedback page", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(getActivity(), FeedbackActivity.class));
     }
 
     private void choseShareApp() {
-        Toast.makeText(getActivity(), "Chose share page", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(getActivity(), ShareAppActivity.class));
     }
 }
