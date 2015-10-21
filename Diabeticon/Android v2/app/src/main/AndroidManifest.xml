@@ -43,6 +43,7 @@
         <activity
             android:name=".SubPages.FeedbackActivity"
             android:label="@string/send_us_message"
+            android:windowSoftInputMode="adjustResize"
             android:parentActivityName=".Core.MainActivity"
             >
             <meta-data
