@@ -17,4 +17,10 @@
     <string name="send_us_message_hint">Give feedback or ask for help...</string>
     <string name="share_with_friends">Share with friends</string>
     <string name="share_with_friends_additional">Let your friends know about Diabeticon!</string>
+
+    <!-- No connection strings -->
+    <string name="noconnection_dialog_title">Internet Connection Error</string>
+    <string name="noconnection_dialog_message">Failed to connect to the internet. Would you like to check your internet settings?</string>
+    <string name="noconnection_dialog_yes">Yes, open settings</string>
+    <string name="noconnection_dialog_no">No, go back</string>
 </resources>
