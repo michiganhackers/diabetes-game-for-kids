@@ -1,4 +1,4 @@
-package com.michiganhackers.diabeticons.FragPages;
+package com.michiganhackers.diabeticons.Core;
 
 import android.content.Intent;
 import android.os.Bundle;

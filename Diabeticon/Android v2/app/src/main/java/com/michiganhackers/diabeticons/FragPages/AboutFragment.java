@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 import com.michiganhackers.diabeticons.R;
 
 /**
- * Created by jawad on 12/10/15.
+ * Created by jawad on 21/10/15.
  */
-public class RecentFragment extends Fragment {
+public class AboutFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v =inflater.inflate(R.layout.tab_1,container,false);
