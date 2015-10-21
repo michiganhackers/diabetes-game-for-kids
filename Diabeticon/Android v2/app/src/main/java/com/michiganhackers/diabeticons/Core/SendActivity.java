@@ -85,7 +85,7 @@ public class SendActivity extends ActionBarActivity {
   // Sends an intent to share the image that was passed to this Activity
   private void sendImage() {
     // Create the uri path to the image itself [thank you AssetsProvider Utils class]
-    Uri imageUri = Uri.parse("content://com.mdstudios.diabeticons/" + mFilePath);
+    Uri imageUri = Uri.parse("content://com.michiganhackers.diabeticons/" + mFilePath);
 
     // Create a general implicit intent with just the image
     Intent shareIntent = new Intent(Intent.ACTION_SEND);

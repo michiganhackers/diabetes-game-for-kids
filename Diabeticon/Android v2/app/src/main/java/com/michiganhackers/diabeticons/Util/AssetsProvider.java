@@ -28,8 +28,11 @@ public class AssetsProvider extends ContentProvider {
     String file_name = uri.getPath().substring(1, uri.getPath().length());
     //String file_name = uri.getLastPathSegment();
 
-    if( file_name == null )
-      throw new FileNotFoundException( );
+    Log.v(LOGTAG, "Filename: " + file_name);
+    if( file_name.equals("") ) {
+      Log.e(LOGTAG, "File name is null");
+      throw new FileNotFoundException();
+    }
 
     AssetFileDescriptor afd = null;
 
@@ -39,7 +42,12 @@ public class AssetsProvider extends ContentProvider {
     }
     catch(IOException e)
     {
+      Log.e(LOGTAG, "Failed at getting the file");
       e.printStackTrace( );
+    }
+
+    if(afd == null || afd.getLength() <= 0) {
+      Log.e(LOGTAG, "afd is null or such");
     }
 
     return afd;//super.openAssetFile(uri, mode);
