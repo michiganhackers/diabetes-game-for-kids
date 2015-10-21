@@ -15,10 +15,10 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp">
         <ImageView
-            android:layout_width="50dp"
+            android:layout_width="65dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_launcher"
-            android:scaleType="fitXY"
+            android:src="@drawable/icon_healthdesign"
+            android:scaleType="fitStart"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="20dp"
             />
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/about_us"
-            android:layout_marginLeft="35dp"
+            android:layout_marginLeft="20dp"
             android:textSize="20sp"/>
     </LinearLayout>
     <LinearLayout
@@ -42,7 +42,7 @@
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_launcher"
+            android:src="@drawable/icon_feedback"
             android:scaleType="fitXY"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="20dp"
@@ -67,7 +67,7 @@
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_launcher"
+            android:src="@drawable/share_blue"
             android:scaleType="fitXY"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="20dp"

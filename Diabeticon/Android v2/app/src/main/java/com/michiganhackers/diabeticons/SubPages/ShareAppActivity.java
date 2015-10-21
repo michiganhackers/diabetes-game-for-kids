@@ -16,7 +16,7 @@ public class ShareAppActivity extends ActionBarActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_send);
+        setContentView(R.layout.activity_shareapp);
 
         // Add the toolbar
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
