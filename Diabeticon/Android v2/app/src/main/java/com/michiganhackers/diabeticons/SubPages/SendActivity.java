@@ -1,4 +1,4 @@
-package com.michiganhackers.diabeticons.Core;
+package com.michiganhackers.diabeticons.SubPages;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;

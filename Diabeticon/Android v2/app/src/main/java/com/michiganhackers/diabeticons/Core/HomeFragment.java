@@ -10,8 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.michiganhackers.diabeticons.Core.MainActivity;
-import com.michiganhackers.diabeticons.Core.SendActivity;
+import com.michiganhackers.diabeticons.SubPages.SendActivity;
 import com.michiganhackers.diabeticons.R;
 import com.michiganhackers.diabeticons.Util.IconListAdapter;
 import com.michiganhackers.diabeticons.Util.Util;

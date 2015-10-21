@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Core.SendActivity"
+            android:name=".SubPages.SendActivity"
             android:label="@string/send"
             android:parentActivityName=".Core.MainActivity"
             >
