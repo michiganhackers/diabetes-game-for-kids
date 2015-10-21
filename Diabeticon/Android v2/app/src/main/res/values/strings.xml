@@ -7,4 +7,14 @@
     <!-- Basic UI Text -->
     <string name="send">Send</string>
     <string name="share_chooser_title">Share to...</string>
+
+    <string name="about_us">About Us</string>
+    <string name="feedback">Feedback</string>ing
+    <string name="share_app">Share this App</string>
+
+    <string name="who_are_we">Who are we?</string>
+    <string name="send_us_message">Send us a message</string>
+    <string name="send_us_message_hint">Give feedback or ask for help...</string>
+    <string name="share_with_friends">Share with friends</string>
+    <string name="share_with_friends_additional">Let your friends know about Diabeticon!</string>
 </resources>
