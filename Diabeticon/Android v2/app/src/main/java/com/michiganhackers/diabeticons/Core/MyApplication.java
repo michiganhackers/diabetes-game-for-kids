@@ -18,6 +18,7 @@ public class MyApplication extends Application {
     private final static String LOGTAG = "MD/MyApplicaiton";
 
     private ArrayList<Icon> mIconList;
+    private ArrayList<Integer> mRecentList;
     private IconListChangeSubscriber mFavSubscriber = null;
 
     @Override
@@ -30,6 +31,7 @@ public class MyApplication extends Application {
 
     private void generateAllIcons() {
         mIconList = new ArrayList<>();
+        mRecentList = new ArrayList<>();
 
         // Get all the necessary images and titles
         AssetManager assetManager = getAssets(); // Necessary to access assets
@@ -75,6 +77,22 @@ public class MyApplication extends Application {
 
     public Icon getIcon(int index) {
         return mIconList.get(index);
+    }
+
+    public ArrayList<Integer> getRecentList() { return mRecentList; }
+
+    public void addRecentItem(int index) {
+        // Check if the index already exists in the list- if so, remove it
+        for(int i = 0; i < mRecentList.size(); i++) {
+            if(mRecentList.get(i) == index) {
+                mRecentList.remove(i);
+
+                break;
+            }
+        }
+
+        // Add the item to the beginning of the list
+        mRecentList.add(0, index);
     }
 
     public void setFavoriteState(int index, boolean value) {

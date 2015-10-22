@@ -122,7 +122,7 @@ public class MainActivity extends ActionBarActivity implements IconListChangeSub
 
     @Override
     public void recentListChanged() {
-
+//        mRecentFrag.updateAdapter(); Unnecessary, as updates onResume everytime anyways which is only when it changes
     }
 
     public class ViewPagerAdapter extends FragmentStatePagerAdapter {

@@ -25,7 +25,7 @@ public class FavoriteFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v =inflater.inflate(R.layout.frag_home,container,false);
+        View v =inflater.inflate(R.layout.frag_favorties,container,false);
         mIconList = (ListView) v.findViewById(R.id.listview);
         return v;
     }
@@ -42,6 +42,9 @@ public class FavoriteFragment extends Fragment {
         mIconList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ((MyApplication) getActivity().getApplication())
+                        .addRecentItem(mAdapter.getIconIndex(position));
+
                 Intent intent = new Intent(getActivity(), SendActivity.class);
                 intent.putExtra(Util.KEY_INDEX, mAdapter.getIconIndex(position));
                 startActivity(intent);

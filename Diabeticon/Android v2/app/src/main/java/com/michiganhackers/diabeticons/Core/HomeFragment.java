@@ -42,6 +42,8 @@ public class HomeFragment extends Fragment {
         mIconList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ((MyApplication) getActivity().getApplication()).addRecentItem(position);
+
                 Intent intent = new Intent(getActivity(), SendActivity.class);
                 intent.putExtra(Util.KEY_INDEX, position);
                 startActivity(intent);
