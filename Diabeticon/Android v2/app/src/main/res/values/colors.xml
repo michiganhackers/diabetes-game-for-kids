@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="ColorPrimary">#00897B</color>
-    <color name="ColorPrimaryDark">#00695C</color>
-    <color name="tabsScrollColor">#004D40</color>
+    <color name="ColorPrimary">#FFEE82</color>
+    <color name="ColorPrimaryDark">#D1C054</color>
+    <color name="tabsScrollColor">#A39226</color>
 
     <!-- Material Design Base Colors -->
     <!-- http://www.google.com/design/spec/style/color.html#color-color-palette -->
