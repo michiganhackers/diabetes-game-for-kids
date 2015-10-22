@@ -6,8 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.michiganhackers.diabeticons.Core.MyApplication;
 
 import java.util.ArrayList;
 
@@ -18,11 +21,11 @@ public class HomeListAdapter extends BaseAdapter {
     private static final String LOGTAG = "MD/HomeListAdapter";
 
     Context mContext;
-    ArrayList<Icon> mAllIcons;
+    MyApplication mAppReference;
 
-    public HomeListAdapter(Context context, ArrayList<Icon> allIcons) {
+    public HomeListAdapter(Context context, MyApplication myApplication) {
         this.mContext = context;
-        this.mAllIcons = allIcons;
+        this.mAppReference = myApplication;
     }
 
     public void updatedFavorites() {
@@ -31,7 +34,7 @@ public class HomeListAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return mAllIcons.size();
+        return mAppReference.getAllIcons().size();
     }
 
     @Override
@@ -45,7 +48,7 @@ public class HomeListAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         View row = null;
         ViewHolder holder;
 
@@ -59,6 +62,7 @@ public class HomeListAdapter extends BaseAdapter {
             holder = new ViewHolder();
             holder.icon = (ImageView) row.findViewById(R.id.icon);
             holder.title = (TextView) row.findViewById(R.id.title);
+            holder.favBtn = (ImageButton) row.findViewById(R.id.btn_fav);
 
             // Make the row reuse the ViewHolder
             row.setTag(holder);
@@ -69,10 +73,31 @@ public class HomeListAdapter extends BaseAdapter {
         }
 
         // Set the title and icon of this item according to the position
-        Icon curIcon = mAllIcons.get(position);
+        Icon curIcon = mAppReference.getAllIcons().get(position);
 
         holder.title.setText(curIcon.getTitle());
         holder.icon.setImageDrawable(curIcon.getImage());
+
+        // Set the favorite button to toggle correctly and to notify
+        holder.favBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(v.isSelected()) {
+                    // Now unselected
+                    v.setSelected(false);
+
+                    // Let the entire app know of the change
+                    mAppReference.setFavoriteState(position, false);
+                }
+                else {
+                    // Now selected
+                    v.setSelected(true);
+
+                    // Let the entire app know of the change
+                    mAppReference.setFavoriteState(position, true);
+                }
+            }
+        });
 
         return row;
     }
@@ -80,5 +105,6 @@ public class HomeListAdapter extends BaseAdapter {
     class ViewHolder{
         public ImageView icon;
         public TextView title;
+        public ImageButton favBtn;
     }
 }

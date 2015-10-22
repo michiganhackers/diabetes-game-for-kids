@@ -36,8 +36,7 @@ public class HomeFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         // Give it the appropriate adapter
-        mAdapter = new HomeListAdapter(getActivity(),
-                ((MyApplication)getActivity().getApplication()).getAllIcons());
+        mAdapter = new HomeListAdapter(getActivity(), (MyApplication) getActivity().getApplication());
         mIconList.setAdapter(mAdapter);
 
         // Set the click listener for the ListView

@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:orientation="horizontal"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
   android:background="@drawable/background_list_itemselect"
+  android:descendantFocusability="blocksDescendants"
   android:padding="@dimen/general"
   >
 
   <!-- Image Icon -->
   <com.michiganhackers.diabeticons.Util.SquareImageView
     android:id="@+id/icon"
-    android:layout_width="0dp"
+    android:layout_width="50dp"
     android:layout_height="50dp"
-    android:src="@drawable/ic_drawer"
+    android:src="@drawable/ic_launcher"
     android:layout_gravity="center_vertical"
     />
 
@@ -20,11 +21,22 @@
     android:id="@+id/title"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_gravity="center_vertical"
-    android:layout_marginLeft="@dimen/general"
-    android:text="TEST TEST TEST"
-    android:textSize="@dimen/textsize_default"
-    android:textColor="@color/black"
+    android:layout_centerVertical="true"
+    android:layout_marginLeft="25dp"
+    android:text="Diabeticon Text"
+    android:layout_toRightOf="@id/icon"
+    android:textSize="20sp"
     />
+
+  <ImageButton
+      android:id="@+id/btn_fav"
+      android:layout_width="30dp"
+      android:layout_height="30dp"
+      android:layout_centerVertical="true"
+      android:layout_alignParentRight="true"
+      android:layout_marginRight="20dp"
+      android:scaleType="fitStart"
+      android:src="@drawable/favoritebtn_list"
+      android:background="@color/transparent"/>
   
-</LinearLayout>
+</RelativeLayout>
