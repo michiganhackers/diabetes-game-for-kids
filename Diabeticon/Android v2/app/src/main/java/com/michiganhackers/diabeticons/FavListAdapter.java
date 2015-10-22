@@ -1,7 +1,6 @@
 package com.michiganhackers.diabeticons;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,24 +12,45 @@ import android.widget.TextView;
 import com.michiganhackers.diabeticons.Core.MyApplication;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by jawad on 22/10/15.
  */
-public class HomeListAdapter extends BaseAdapter {
+public class FavListAdapter extends BaseAdapter {
     private static final String LOGTAG = "MD/HomeListAdapter";
 
     Context mContext;
     MyApplication mAppReference;
+    ArrayList<Integer> mFavoritesList;
 
-    public HomeListAdapter(Context context, MyApplication myApplication) {
+    public FavListAdapter(Context context, MyApplication myApplication) {
         this.mContext = context;
         this.mAppReference = myApplication;
+
+        updateData();
+    }
+
+    public void updateData() {
+        mFavoritesList = new ArrayList<>();
+
+        List<Icon> allIcons = mAppReference.getAllIcons();
+        for(int i = 0; i < allIcons.size(); ++i) {
+            if(allIcons.get(i).getIsFavorite()) {
+                mFavoritesList.add(i);
+            }
+        }
+
+        notifyDataSetChanged();
+    }
+
+    public int getIconIndex(int position) {
+        return mFavoritesList.get(position);
     }
 
     @Override
     public int getCount() {
-        return mAppReference.getAllIcons().size();
+        return mFavoritesList.size();
     }
 
     @Override
@@ -69,7 +89,7 @@ public class HomeListAdapter extends BaseAdapter {
         }
 
         // Set the title and icon of this item according to the position
-        Icon curIcon = mAppReference.getAllIcons().get(position);
+        Icon curIcon = mAppReference.getAllIcons().get(getIconIndex(position));
 
         holder.title.setText(curIcon.getTitle());
         holder.icon.setImageDrawable(curIcon.getImage());
@@ -84,14 +104,14 @@ public class HomeListAdapter extends BaseAdapter {
                     v.setSelected(false);
 
                     // Let the entire app know of the change
-                    mAppReference.setFavoriteState(position, false);
+                    mAppReference.setFavoriteState(getIconIndex(position), false);
                 }
                 else {
                     // Now selected
                     v.setSelected(true);
 
                     // Let the entire app know of the change
-                    mAppReference.setFavoriteState(position, true);
+                    mAppReference.setFavoriteState(getIconIndex(position), true);
                 }
             }
         });

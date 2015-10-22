@@ -5,14 +5,11 @@ import android.content.res.AssetManager;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 
-import com.michiganhackers.diabeticons.FavoriteChangeSubscriber;
+import com.michiganhackers.diabeticons.IconListChangeSubscriber;
 import com.michiganhackers.diabeticons.Icon;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * Created by jawad on 22/10/15.
@@ -21,7 +18,7 @@ public class MyApplication extends Application {
     private final static String LOGTAG = "MD/MyApplicaiton";
 
     private ArrayList<Icon> mIconList;
-    private FavoriteChangeSubscriber mFavSubscriber = null;
+    private IconListChangeSubscriber mFavSubscriber = null;
 
     @Override
     public void onCreate() {
@@ -90,7 +87,7 @@ public class MyApplication extends Application {
         }
     }
 
-    public void setFavoriteChangeNotifier(FavoriteChangeSubscriber subscriber) {
+    public void setFavoriteChangeNotifier(IconListChangeSubscriber subscriber) {
         this.mFavSubscriber = subscriber;
     }
 

@@ -52,6 +52,11 @@ public class HomeFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+
+        updateAdapter();
+    }
+
+    public void updateAdapter() {
         mAdapter.notifyDataSetChanged();
     }
 }
