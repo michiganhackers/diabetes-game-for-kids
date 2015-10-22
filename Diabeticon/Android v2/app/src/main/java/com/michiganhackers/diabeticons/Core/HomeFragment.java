@@ -13,7 +13,6 @@ import android.widget.ListView;
 import com.michiganhackers.diabeticons.HomeListAdapter;
 import com.michiganhackers.diabeticons.SubPages.SendActivity;
 import com.michiganhackers.diabeticons.R;
-import com.michiganhackers.diabeticons.IconListAdapter;
 import com.michiganhackers.diabeticons.Util.Util;
 
 /**
@@ -48,5 +47,11 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mAdapter.notifyDataSetChanged();
     }
 }

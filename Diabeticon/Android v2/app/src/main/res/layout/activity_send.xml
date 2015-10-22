@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/general"
-        android:text="TEST TEST TEST"
+        android:text="Diabeticon Name"
         android:textColor="@color/black"
         android:textSize="@dimen/textsize_default"/>
 
@@ -38,25 +38,32 @@
         android:layout_height="250dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/general"
-        android:src="@drawable/ic_drawer"/>
+        android:src="@drawable/ic_launcher"/>
 
-      <RelativeLayout
+      <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:gravity="center">
 
-        <Button
-          android:id="@+id/button_send"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_centerInParent="true"
-          android:text="@string/send"
-          android:textColor="@color/white"
-          android:background="@drawable/button_bg_custom"
-          android:textSize="@dimen/textsize_default"
-        />
+        <ImageButton
+            android:id="@+id/btn_fav"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:background="@color/transparent"
+            android:src="@drawable/favoritebtn_iconfocus"/>
 
-        </RelativeLayout>
+        <ImageButton
+            android:id="@+id/button_send"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="8dp"
+            android:scaleType="fitXY"
+            android:background="@color/transparent"
+            android:src="@drawable/send_circle"/>
+
+        </LinearLayout>
     </LinearLayout>
 
   </RelativeLayout>

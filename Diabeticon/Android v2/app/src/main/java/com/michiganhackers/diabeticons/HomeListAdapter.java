@@ -78,7 +78,8 @@ public class HomeListAdapter extends BaseAdapter {
         holder.title.setText(curIcon.getTitle());
         holder.icon.setImageDrawable(curIcon.getImage());
 
-        // Set the favorite button to toggle correctly and to notify
+        // Set the favorite button to toggle correctly
+        holder.favBtn.setSelected(curIcon.getIsFavorite());
         holder.favBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

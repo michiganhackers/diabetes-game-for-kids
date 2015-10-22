@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -46,9 +47,11 @@ public class SendActivity extends ActionBarActivity {
     // Grab the data passed to this Activity
     Bundle extras = getIntent().getExtras();
     if(extras != null) {
+      final MyApplication myApplication = ((MyApplication) getApplication());
+
       // Get the passed in icon index and get the respective icon
-      int index = extras.getInt(Util.KEY_INDEX);
-      mCurIcon = ((MyApplication) getApplication()).getIcon(index);
+      final int index = extras.getInt(Util.KEY_INDEX);
+      mCurIcon = myApplication.getIcon(index);
 
 //      Log.d(LOGTAG, "index: " + index);
 
@@ -69,11 +72,35 @@ public class SendActivity extends ActionBarActivity {
       }
 
       // Set the send button to actually send the image
-      Button sendButton = (Button) findViewById(R.id.button_send);
+      ImageButton sendButton = (ImageButton) findViewById(R.id.button_send);
       sendButton.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
           sendImage();
+        }
+      });
+
+      // Set the button to toggle favorite status
+
+      ImageButton favButton = (ImageButton) findViewById(R.id.btn_fav);
+      favButton.setSelected(mCurIcon.getIsFavorite());
+      favButton.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+          if(v.isSelected()) {
+            // Now unselected
+            v.setSelected(false);
+
+            // Let the entire app know of the change
+            myApplication.setFavoriteState(index, false);
+          }
+          else {
+            // Now selected
+            v.setSelected(true);
+
+            // Let the entire app know of the change
+            myApplication.setFavoriteState(index, true);
+          }
         }
       });
     }
