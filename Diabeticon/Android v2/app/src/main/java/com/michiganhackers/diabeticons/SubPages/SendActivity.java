@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.michiganhackers.diabeticons.Core.MyApplication;
+import com.michiganhackers.diabeticons.Icon;
 import com.michiganhackers.diabeticons.R;
 import com.michiganhackers.diabeticons.Util.Util;
 
@@ -26,9 +28,8 @@ public class SendActivity extends ActionBarActivity {
   private static final String LOGTAG = "MD/SendActivity";
 
   Toolbar mToolbar;
-  String mTitle;    // Title of this item
-  String mFilePath;      // File path to this file, ie assets/mFilePath
-  ImageView mImageView;  // The actual image for this item
+  Icon mCurIcon;
+  ImageView mImageView;  // The actual imageview for this item
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -45,19 +46,19 @@ public class SendActivity extends ActionBarActivity {
     // Grab the data passed to this Activity
     Bundle extras = getIntent().getExtras();
     if(extras != null) {
-      // Get the passed in data
-      mTitle = extras.getString(Util.KEY_TITLE);
-      mFilePath = extras.getString(Util.KEY_PATH);
+      // Get the passed in icon index and get the respective icon
+      int index = extras.getInt(Util.KEY_INDEX);
+      mCurIcon = ((MyApplication) getApplication()).getIcon(index);
 
-      Log.d(LOGTAG, "mTitle: " + mTitle + " | mFilePath: " + mFilePath);
+//      Log.d(LOGTAG, "index: " + index);
 
       // Set the title ofthe title view
       TextView titleText = (TextView) findViewById(R.id.title);
-      titleText.setText(mTitle);
+      titleText.setText(mCurIcon.getTitle());
 
       // Get the image for this item and set the image preview
       try {
-        Drawable drawable = Drawable.createFromStream(getAssets().open(mFilePath), null);
+        Drawable drawable = Drawable.createFromStream(getAssets().open(mCurIcon.getPath()), null);
 
         mImageView = (ImageView) findViewById(R.id.image);
         mImageView.setImageDrawable(drawable);
@@ -85,7 +86,7 @@ public class SendActivity extends ActionBarActivity {
   // Sends an intent to share the image that was passed to this Activity
   private void sendImage() {
     // Create the uri path to the image itself [thank you AssetsProvider Utils class]
-    Uri imageUri = Uri.parse("content://com.michiganhackers.diabeticons/" + mFilePath);
+    Uri imageUri = Uri.parse("content://com.michiganhackers.diabeticons/" + mCurIcon.getPath());
 
     // Create a general implicit intent with just the image
     Intent shareIntent = new Intent(Intent.ACTION_SEND);

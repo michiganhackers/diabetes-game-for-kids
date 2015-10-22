@@ -10,9 +10,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.michiganhackers.diabeticons.HomeListAdapter;
 import com.michiganhackers.diabeticons.SubPages.SendActivity;
 import com.michiganhackers.diabeticons.R;
-import com.michiganhackers.diabeticons.Util.IconListAdapter;
+import com.michiganhackers.diabeticons.IconListAdapter;
 import com.michiganhackers.diabeticons.Util.Util;
 
 /**
@@ -21,7 +22,7 @@ import com.michiganhackers.diabeticons.Util.Util;
 public class HomeFragment extends Fragment {
 
     ListView mIconList;
-    IconListAdapter mAdapter;
+    HomeListAdapter mAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -35,20 +36,16 @@ public class HomeFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         // Give it the appropriate adapter
-        mAdapter = new IconListAdapter(getActivity());
+        mAdapter = new HomeListAdapter(getActivity(),
+                ((MyApplication)getActivity().getApplication()).getAllIcons());
         mIconList.setAdapter(mAdapter);
 
         // Set the click listener for the ListView
         mIconList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Get the title and path to the image from the adapter
-                String path = mAdapter.getPath(position);
-                String title = mAdapter.getTitle(position);
-
                 Intent intent = new Intent(getActivity(), SendActivity.class);
-                intent.putExtra(Util.KEY_PATH, path);
-                intent.putExtra(Util.KEY_TITLE, title);
+                intent.putExtra(Util.KEY_INDEX, position);
                 startActivity(intent);
             }
         });

@@ -1,4 +1,4 @@
-package com.michiganhackers.diabeticons.Util;
+package com.michiganhackers.diabeticons;
 
 import android.content.Context;
 import android.content.res.AssetManager;
