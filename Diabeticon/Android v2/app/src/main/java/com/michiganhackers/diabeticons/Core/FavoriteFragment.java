@@ -60,6 +60,7 @@ public class FavoriteFragment extends Fragment {
     }
 
     public void updateAdapter() {
-        mAdapter.updateData();
+        if(mAdapter != null)
+            mAdapter.updateData();
     }
 }
