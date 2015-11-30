@@ -17,11 +17,16 @@
     <string name="send_us_message">Send us a message</string>
     <string name="send_us_message_hint">Give feedback or ask for help...</string>
     <string name="share_with_friends">Share with friends</string>
-    <string name="share_with_friends_additional">Let your friends know about Diabeticon!</string>
+    <string name="share_with_friends_additional">Let your friends know about this app!</string>
 
     <!-- No connection strings -->
     <string name="noconnection_dialog_title">Internet Connection Error</string>
     <string name="noconnection_dialog_message">Failed to connect to the internet. Would you like to check your internet settings?</string>
     <string name="noconnection_dialog_yes">Yes, open settings</string>
     <string name="noconnection_dialog_no">No, go back</string>
+
+    <!-- Share app strings -->
+    <string name="share_app_basemessage">Check out this cool app:</string>
+    <string name="share_app_link">bit.ly/diabetesemoticons</string>
+    <string name="share_app_email_subject">Diabetes Emoticons!</string>
 </resources>
