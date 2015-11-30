@@ -25,6 +25,10 @@
     <string name="noconnection_dialog_yes">Yes, open settings</string>
     <string name="noconnection_dialog_no">No, go back</string>
 
+    <!-- Feedback -->
+    <string name="feedback_tofield">healthdesignbyus@gmail.com</string>
+    <string name="feedback_subject">Diabetes Emoticons Feedback</string>
+
     <!-- Share app strings -->
     <string name="share_app_basemessage">Check out this cool app:</string>
     <string name="share_app_link">bit.ly/diabetesemoticons</string>

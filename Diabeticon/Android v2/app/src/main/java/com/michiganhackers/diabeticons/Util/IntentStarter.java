@@ -30,6 +30,16 @@ public class IntentStarter {
         context.startActivity(emailIntent);
     }
 
+    public static void sendEmail(Context context, String[] toField, String subject, String body) {
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+        emailIntent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, toField);
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        emailIntent.putExtra(Intent.EXTRA_TEXT, body);
+
+        context.startActivity(emailIntent);
+    }
+
     /*// Open an url to send an email
     public static void sendEmail(Context context, String toEmail, String subject) {
         // Originally from: http://stackoverflow.com/questions/8284706/send-email-via-gmail

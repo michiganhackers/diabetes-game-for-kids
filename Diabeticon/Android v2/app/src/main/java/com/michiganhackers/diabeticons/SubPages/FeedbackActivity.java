@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.michiganhackers.diabeticons.R;
+import com.michiganhackers.diabeticons.Util.IntentStarter;
 
 /**
  * Created by jawad on 21/10/15.
@@ -39,9 +40,12 @@ public class FeedbackActivity extends ActionBarActivity {
                 // Get the text from the input
                 String input = mInputEditText.getText().toString();
 
-                // For now, just toast it
-                Toast.makeText(FeedbackActivity.this, "Input: " + input, Toast.LENGTH_LONG)
-                        .show();
+                // Open the input in an appropriate email for the user to send
+                IntentStarter.sendEmail(FeedbackActivity.this,
+                        new String[] {getResources().getString(R.string.feedback_tofield)},
+                        getResources().getString(R.string.feedback_subject),
+                        input
+                );
             }
         });
     }
